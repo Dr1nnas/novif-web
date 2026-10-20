@@ -16,7 +16,7 @@ section{padding:84px 0}h1,h2,h3{font-family:var(--head);line-height:1.15;margin:
 .hours{list-style:none;padding:0}.hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}
 .map{width:100%;height:340px;border:0;border-radius:var(--rad)}.stars{color:var(--acc2);letter-spacing:2px}.sample{font-size:.75rem;background:var(--line);padding:2px 8px;border-radius:99px;vertical-align:middle}
 footer{padding:40px 0 90px;font-size:.9rem;opacity:.8;border-top:1px solid var(--line)}
-@media(max-width:820px){.g2,.g3{grid-template-columns:1fr}header nav a:not(.btn){display:none}.gal{grid-template-columns:1fr 1fr}section{padding:60px 0}.hero{min-height:auto;padding:70px 0}}
+@media(max-width:820px){.logo{font-size:1.05rem}header .btn{padding:9px 14px;white-space:nowrap;font-size:.85rem}.g2,.g3{grid-template-columns:1fr}header nav a:not(.btn){display:none}.gal{grid-template-columns:1fr 1fr}section{padding:60px 0}.hero{min-height:auto;padding:70px 0}}
 '''
 def page(d):
     svc=''.join(f'<li><span>{n}<small>{s}</small></span><span class="p">{p}</span></li>' for n,s,p in d['items'])
@@ -58,7 +58,7 @@ barber=dict(name='Nordkant Barbers',logo='NORDKANT<span style="color:var(--acc)"
  hours=[('Mon–Fri','10:00 – 19:00'),('Saturday','10:00 – 16:00'),('Sunday','Closed')],addr='Example street 12, 0150 Oslo (placeholder address)',bbox='10.735%2C59.908%2C10.760%2C59.918',
  bookh='Ready for a fresh cut?',bookp='Book online in under a minute, or just walk in.',
  fonts='',vars='--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--ink:#efe7da;--bg:#14100d;--card:#1d1713;--line:#3a2f26;--acc:#c9a45c;--accink:#14100d;--acc2:#d8b56c;--rad:4px;--navbg:rgba(20,16,13,.85)',
- css='.hero{background:radial-gradient(ellipse at 80% 30%,#3a2d22,#14100d 60%)}.hero h1{letter-spacing:-.01em}.heroart{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:min(34vw,360px);opacity:.9}.alt{background:#1a1410}.booking{background:#c9a45c;color:#14100d}.booking .btn{background:#14100d;color:#efe7da;border-color:#14100d}@media(max-width:820px){.heroart{display:none}}',
+ css='.hero{background:radial-gradient(ellipse at 80% 30%,#3a2d22,#14100d 60%)}.hero h1{letter-spacing:-.01em}.heroart{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:min(34vw,360px);opacity:.9}.alt{background:#1a1410}.booking{background:#c9a45c;color:#14100d}.booking .btn{background:#14100d;color:#efe7da;border-color:#14100d}@media(max-width:820px){.logo{font-size:1.05rem}header .btn{padding:9px 14px;white-space:nowrap;font-size:.85rem}.heroart{display:none}}',
  heroart=f'<svg class="heroart" viewBox="0 0 200 200">{pole}</svg>')
 
 # COFFEE
@@ -77,7 +77,7 @@ coffee=dict(name='Morgenlys Kaffebar',logo='morgenlys',emoji='☕',tag='Specialt
  hours=[('Mon–Fri','07:00 – 17:00'),('Saturday','08:00 – 17:00'),('Sunday','09:00 – 16:00')],addr='Example square 3, 5003 Bergen (placeholder address)',bbox='5.318%2C60.390%2C5.335%2C60.398',
  bookh='Skip the queue',bookp='Order ahead and pick up at the counter — or book the corner table for your group.',
  fonts='',vars='--head:"Trebuchet MS","Avenir Next",system-ui,sans-serif;--body:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--ink:#3d2414;--bg:#fbf6ef;--card:#fff;--line:#ecdcc8;--acc:#d8754a;--accink:#fff;--acc2:#b55a32;--rad:22px;--navbg:rgba(251,246,239,.85)',
- css='.hero{background:linear-gradient(120deg,#fbf6ef 40%,#f3e3cf)}.hero h1{font-weight:800;letter-spacing:-.02em}.heroart{position:absolute;right:5%;bottom:0;width:min(40vw,440px)}.alt{background:#f5ebdd}.logo{font-weight:800;letter-spacing:-.03em;color:var(--acc)}.booking{background:#3d2414;color:#fbf6ef}.card{box-shadow:0 8px 30px rgba(61,36,20,.07)}@media(max-width:820px){.heroart{position:relative;right:auto;margin:0 auto 20px;width:60%}.hero{flex-direction:column-reverse}}',
+ css='.hero{background:linear-gradient(120deg,#fbf6ef 40%,#f3e3cf)}.hero h1{font-weight:800;letter-spacing:-.02em}.heroart{position:absolute;right:5%;bottom:0;width:min(40vw,440px)}.alt{background:#f5ebdd}.logo{font-weight:800;letter-spacing:-.03em;color:var(--acc)}.booking{background:#3d2414;color:#fbf6ef}.card{box-shadow:0 8px 30px rgba(61,36,20,.07)}@media(max-width:820px){.logo{font-size:1.05rem}header .btn{padding:9px 14px;white-space:nowrap;font-size:.85rem}.heroart{position:relative;right:auto;margin:0 auto 20px;width:60%}.hero{flex-direction:column-reverse}}',
  heroart=f'<svg class="heroart" viewBox="0 0 200 200">{cup}</svg>')
 
 # TRADES
@@ -97,7 +97,7 @@ trades=dict(name='Fjordline Rør &amp; Elektro',logo='FJORDLINE <span style="fon
  hours=[('Mon–Fri','07:00 – 17:00'),('Saturday','By appointment'),('Emergencies','24/7')],addr='Service area: Trondheim &amp; surroundings (placeholder)',bbox='10.380%2C63.420%2C10.420%2C63.440',
  bookh='Describe the job, get a quote today',bookp='Send a few photos and a short description — we reply within business hours.',
  fonts='',vars='--head:"Arial Black","Helvetica Neue",Arial,sans-serif;--body:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--ink:#0b2233;--bg:#ffffff;--card:#f4f8fb;--line:#dbe6ee;--acc:#ffb703;--accink:#0b2233;--acc2:#0b6e99;--rad:10px;--navbg:rgba(255,255,255,.9)',
- css='.hero{background:#0b3954;color:#fff}.hero .eyebrow{color:#ffb703}.heroart{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:min(38vw,420px)}.alt{background:#f4f8fb}.booking{background:#ffb703}.booking .btn{background:#0b2233;color:#fff;border-color:#0b2233}.booking .btn.ghost{background:transparent;color:#0b2233}.price-list .p{color:#0b6e99}@media(max-width:820px){.heroart{display:none}}',
+ css='.hero{background:#0b3954;color:#fff}.hero .eyebrow{color:#ffb703}.heroart{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:min(38vw,420px)}.alt{background:#f4f8fb}.booking{background:#ffb703}.booking .btn{background:#0b2233;color:#fff;border-color:#0b2233}.booking .btn.ghost{background:transparent;color:#0b2233}.price-list .p{color:#0b6e99}@media(max-width:820px){.logo{font-size:1.05rem}header .btn{padding:9px 14px;white-space:nowrap;font-size:.85rem}.heroart{display:none}}',
  heroart=f'<svg class="heroart" viewBox="0 0 200 200">{house}</svg>')
 
 for slug,d in [('barbershop',barber),('coffee',coffee),('trades',trades)]:
